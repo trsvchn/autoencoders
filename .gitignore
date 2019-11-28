@@ -39,3 +39,6 @@ dmypy.json
 
 # IDEA config files
 .idea/
+
+# VS Code
+.vscode/
