@@ -1,15 +1,15 @@
-import torch
 from torchvision.datasets import MNIST
 from torch.utils.data import DataLoader
 from torchvision.transforms import ToTensor
 
 
 def prepare_loaders(data_path: str,
-                    transforms=ToTensor(),
                     tbs: int = 64,
                     vbs: int = 64,
                     shuffle: bool = False,
-                    nworkers: int = 0):
+                    nworkers: int = 0,
+                    transforms=ToTensor(),
+                    ):
 
     train_dataset = MNIST(data_path, train=True, transform=transforms)
     val_dataset = MNIST(data_path, train=False, transform=transforms)
