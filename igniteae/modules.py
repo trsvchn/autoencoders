@@ -6,10 +6,10 @@ from torch import distributions, nn, Tensor
 
 
 class Id(nn.Identity):
-    def __init__(self) -> None:
+    def __init__(self, *args, **kwargs) -> None:
         super().__init__()
-        self.encoder = nn.Parameter(torch.empty(1, 1))
-        self.decoder = nn.Parameter(torch.empty(1, 1))
+        self.encoder = nn.Parameter(torch.empty(1,))
+        self.decoder = nn.Parameter(torch.empty(1,))
 
 
 class Affine(nn.Linear):
